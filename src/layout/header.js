@@ -1,5 +1,5 @@
 import {Image} from '../components/ui-components/ui_components'
-import SearchTool from '../apps/search/tools/search_box'
+//import SearchTool from '../apps/search/tools/search_box' <SearchTool styleBox={{}} styleButton={{}} />
 import {Schema, ImageObject} from '../components/schemas/schemas'
 import conf from './conf/header.conf.json'
 
@@ -16,7 +16,7 @@ const Header = ({
             <div style={StyleSideB}>
                 {
                    !isHome
-                   ? <SearchTool styleBox={{}} styleButton={{}} />
+                   ? null
                    : <>
                        <a className="aAccent" href="/TermsConditions">Terms and conditions</a>
                        <a className="aAccent" href="/Contact" style={{ paddingLeft: "10px" }} >Contact US</a>

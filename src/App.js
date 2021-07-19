@@ -5,14 +5,27 @@ import {
 } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import Layout from "./layout/layout";
+import Home from "./apps/home/home";
+import Search from "./apps/search/search";
 
 function App() {
+
   return (
       <HelmetProvider>
         <BrowserRouter>
-          <Layout>
-
-          </Layout>
+            <Layout>
+            <Switch>
+                <Route exact path={"/"}>
+                    <Home/>
+                </Route>
+                <Route path={"/home"}>
+                    <Home/>
+                </Route>
+                <Route path={["/search/:keyword","/search"]}>
+                    <Search />
+                </Route>
+            </Switch>
+            </Layout>
         </BrowserRouter>
       </HelmetProvider>
   );
@@ -20,17 +33,13 @@ function App() {
 
 export default App;
 
+
 /**
+ *
+ *
+ *
  * <Switch>
- <Route exact path={"/"}>
- <Home />
- </Route>
- <Route path={"/home"}>
- <Home />
- </Route>
- <Route path={"/search"}>
- <Search />
- </Route>
+
  <Route path={["/gene/:id/:site/:section","/gene/:id/:site","/gene/:id","/gene",]}>
  <Gene />
  </Route>

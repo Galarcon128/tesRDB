@@ -7,7 +7,7 @@ import {gql} from "apollo-boost";
 export const query = (search, limit = 10, page = 0)=>{
     return gql`
     {
-        getRegulonBy(limit: ${limit}, page: ${page}, search: ${search}) {
+        getRegulonBy(limit: ${limit}, page: ${page}, search: "${search}") {
             data {
                 _id
                 transcriptionFactor{

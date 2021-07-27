@@ -11,7 +11,6 @@ import Gene from "./apps/gene/gene";
 import Operon from "./apps/operon/operon";
 
 function App() {
-
   return (
       <HelmetProvider>
         <BrowserRouter>
